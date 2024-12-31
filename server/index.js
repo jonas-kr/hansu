@@ -17,7 +17,7 @@ const ordersRoute = require('./routes/ordersRoute')
 
 //Activating cors middleware so we can make requests from the origin
 app.use(cors({
-    origin: 'https://hansu-store.vercel.app' && 'http://localhost:5173', 
+    origin: 'https://hansu-store.vercel.app', 
     credentials: true
 }))
 
