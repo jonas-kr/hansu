@@ -43,4 +43,4 @@ export const assets = {
     check_icon
 }
 
-export const URL = "http://localhost:2025"
+export const URL = "https://hansu-store.onrender.com"
