@@ -13,7 +13,7 @@ const About = () => {
       <div className="my-10 flex flex-col md:flex-row gap-16">
         <img className="w-full md:max-w-[450px]" src={assets.about_img} alt="about" />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
-          <p>JKR STORE was born out of a passion for innovation and a desire
+          <p>HANSU STORE was born out of a passion for innovation and a desire
             to revolutionize the way people shop online. Our journey began
             with a simple idea: to provide a platform where customers can
             easily discover, explore, and purchase a wide range of products
@@ -24,7 +24,7 @@ const About = () => {
             beauty to electronics and home essentials, we offer an extensive collection sourced
             from trusted brands and suppliers.</p>
           <b className="text-gray-800">Our Mission</b>
-          <p>Our mission at JKR STORE is to empower customers with choice, convenience, and confidence.
+          <p>Our mission at HANSU STORE is to empower customers with choice, convenience, and confidence.
             We're dedicated to providing a seamless shopping experience that exceeds expectations,
             from browsing and ordering to delivery and beyond.</p>
         </div>

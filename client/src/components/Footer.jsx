@@ -19,13 +19,13 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
           <ul className="flex flex-col gap-1 text-gray-600">
-            <li>+213-0554265298</li>
-            <li>yakerdev@gmail.com</li>
-            <li className="cursor-pointer">
+            <li>+213-0795798530</li>
+            <li>malou.mohamed99@gmail.com</li>
+            {/* <li className="cursor-pointer">
               <a href="https://www.instagram.com/younes.kezadri" target="_blank">
                 Instagram
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

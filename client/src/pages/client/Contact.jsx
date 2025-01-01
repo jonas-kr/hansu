@@ -15,8 +15,8 @@ const Contact = () => {
                 <div className="flex flex-col justify-center items-start gap-6">
                     <p className="font-semibold text-xl text-gray-600">Our Store</p>
                     <p className=" text-gray-500">Cite Koraichi <br /> Reghaia, Alger Algeria</p>
-                    <p className=" text-gray-500">Tel: 0554265298 <br /> Email: yakerdev@gmail.com</p>
-                    <p className="font-semibold text-xl text-gray-600">Careers at JKR STORE</p>
+                    <p className=" text-gray-500">Tel: 0795798530 <br /> Email: malou.mohamed99@gmail.com</p>
+                    <p className="font-semibold text-xl text-gray-600">Careers at HANSU STORE</p>
                     <p className=" text-gray-500">Learn more about our teams and job openings.</p>
                     <button className="border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500">Explore Jobs</button>
                 </div>
