@@ -36,12 +36,13 @@ const OrderCard = ({ props }) => {
             </div>
             <p className="text-base font-medium sm:text-lg">DA{props.totalPrice}</p>
             <div className="h-full flexBetween items-end sm:flex-col">
-                <select className="p-2 rounded-sm font-semibold" value={state} onChange={(e) => { setState(e.target.value) }}>
-                    <option value="Order Placed">Order Placed</option>
-                    <option value="Packing">Packing</option>
-                    <option value="Shipped">Shipped</option>
-                    <option value="Out for delivery">Out for delivery</option>
-                    <option value="Delivered">Delivered</option>
+                <select className={`p-2 rounded-sm font-semibold 
+                    ${state == "Waiting" && "bg-orange-500"} ${state == "Confirmed" && "bg-green-500"} ${state == "Refused" && "bg-red-500"}
+                    `} value={state} onChange={(e) => { setState(e.target.value) }}>
+                    <option value="Waiting">Waiting</option>
+                    <option value="Confirmed">Confirmed</option>
+                    <option value="Refused">Refused</option>
+
                 </select>
                 <h2 className="text-3xl font-bold">{props.billingInfo.state}</h2>
             </div>

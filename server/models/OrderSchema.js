@@ -28,7 +28,7 @@ const OrderSchema = new mongoose.Schema({
     userId: Number,
     state: {
         type: String,
-        default: "Order Placed"
+        default: "Waiting"
     },
     totalPrice: {
         type: Number,
