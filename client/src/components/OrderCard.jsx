@@ -1,4 +1,5 @@
 import { assets } from "../assets/admin_assets/assets"
+import { assets as frontAssets }  from "../assets/frontend_assets/assets"
 import { useEffect, useState } from "react"
 import { deleteOrder, updateOrder } from "../controllers/adminController"
 
@@ -47,7 +48,7 @@ const OrderCard = ({ props, orders, setOrders }) => {
             </div>
             <p className="text-base font-medium sm:text-lg">DA{props.totalPrice}</p>
             <div className="h-full flexBetween items-end sm:flex-col">
-                <img src={assets.bin_icon} alt="bin" className="w-5 cursor-pointer" onClick={handleOrderDelete} />
+                <img src={frontAssets.bin_icon} alt="bin" className="w-5 cursor-pointer" onClick={handleOrderDelete} />
 
                 <select className={`p-2 rounded-sm font-semibold text-white
                     ${state == "Waiting" && "bg-orange-500"} ${state == "Confirmed" && "bg-green-500"} ${state == "Refused" && "bg-red-500"}
