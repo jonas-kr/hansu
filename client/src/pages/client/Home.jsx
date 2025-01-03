@@ -77,8 +77,8 @@ const Home = () => {
         </div>
         <div>
           <img src={assets.quality_icon} className="w-12 m-auto mb-5" alt="quality" />
-          <p className=" font-semibold">سياسة الإرجاع خلال 7 أيام</p>
-          <p className=" text-gray-400">نحن نقدم سياسة إرجاع مجانية لمدة 7 أيام</p>
+          <p className=" font-semibold">منتج ذو جودة عالية </p>
+          <p className=" text-gray-400">نحن نقدم منتجات عالية الجودة باقل اسعار</p>
         </div>
         <div>
           <img src={assets.support_img} className="w-12 m-auto mb-5" alt="support" />

@@ -157,8 +157,7 @@ const Product = () => {
 
           <hr className="mt-8 sm:w-4/5"></hr>
           <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1 text-right font-['Cairo']">
-            <p>منتج أصلي %100.</p>
-            <p>سياسة الاستبدال سهلة خلال 7 أيام.</p>
+            <p>منتج ذو جودة عالية .</p>
           </div>
 
         </div>
