@@ -8,8 +8,7 @@ const AdminProductCard = ({ props ,products,setProducts}) => {
         e.preventDefault()
         if (!confirm("Are you sure to delete!")) return 0
         try {
-           // const res = deleteProduct(props._id)
-            console.log(products.filter((p) => p._id == props._id));
+            const res = deleteProduct(props._id)
             setProducts(products.filter((p) => p._id == props._id))
 
         } catch (error) {
