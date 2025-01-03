@@ -9,6 +9,7 @@ const AdminProductCard = ({ props ,products,setProducts}) => {
         if (!confirm("Are you sure to delete!")) return 0
         try {
             //const res = deleteProduct(props._id)
+            console.log(products);
             setProducts(products.filter((p) => p._id == props._id))
         } catch (error) {
             alert(error.message)
