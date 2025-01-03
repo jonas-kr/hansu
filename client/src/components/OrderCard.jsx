@@ -11,7 +11,6 @@ const OrderCard = ({ props, orders, setOrders }) => {
         if (!confirm("Are you sure to delete!")) return 0
         try {
             const res = deleteOrder(props._id)
-            console.log(res);
             setOrders(orders.filter((o) => o._id == props._id))
         } catch (error) {
             alert(error.message)
@@ -49,14 +48,13 @@ const OrderCard = ({ props, orders, setOrders }) => {
             </div>
             <p className="text-base font-medium sm:text-lg">DA{props.totalPrice}</p>
             <div className="h-full flexBetween items-end sm:flex-col">
-                <img src={frontAssets.bin_icon} alt="bin" className="w-5 cursor-pointer" onClick={handleOrderDelete} />
+                <img src={frontAssets.bin_icon} alt="bin" className="w-5 cursor-pointer mb-2" onClick={handleOrderDelete} />
                 <select className={`p-2 rounded-sm font-semibold text-white
                     ${state == "Waiting" && "bg-orange-500"} ${state == "Confirmed" && "bg-green-500"} ${state == "Refused" && "bg-red-500"}
                     `} value={state} onChange={(e) => { setState(e.target.value) }}>
                     <option value="Waiting">Waiting</option>
                     <option value="Confirmed">Confirmed</option>
                     <option value="Refused">Refused</option>
-
                 </select>
                 <h2 className="text-3xl font-bold">{props.billingInfo.state}</h2>
             </div>

@@ -93,7 +93,7 @@ const getUserOrders = async (req, res) => {
 const delOrder = async (req, res) => {
     const { id } = req.params
     try {
-        await Order.findOneAndDelete({ id })
+        await Order.findOneAndDelete({ _id: id })
         res.status(200).json({ message: "Order successfully deleted" })
     } catch (error) {
         res.status(500).json({ error: `error is ${error.message}` })
