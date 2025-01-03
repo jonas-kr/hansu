@@ -28,6 +28,8 @@ const ProductList = () => {
             })
             setProducts(res.products)
             setTotalPages(res.totalPages)
+            console.log("data fetched");
+            
         }
         getData()
     }, [page,products])
