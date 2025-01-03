@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Product = ({ props }) => {
     let difference = 100 - ((props.salePrice * 100) / props.basePrice) || null
     return (
-        <Link className="text-gray-700 cursor-pointer relative" to={`/item/${props.id}`}>
+        <Link className="text-gray-700 cursor-pointer relative z-10" to={`/item/${props.id}`}>
             {props.salePrice && <p className="absolute top-2 left-2 bg-red-600 px-1 py-[2px] rounded-sm text-white text-sm">-{Math.floor(difference)}%</p>
             }
             <div className="overflow-hidden aspect-square rounded-md border-[0.5px] flexCenter" >

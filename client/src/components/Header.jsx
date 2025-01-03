@@ -25,7 +25,7 @@ const Header = () => {
   }
 
   return (
-    <div className="sticky top-0 left-0 bg-white font-['Cairo']">
+    <div className="sticky top-0 left-0 z-50 bg-white font-['Cairo']">
       <header className='py-5 flexBetween'>
         <Link to="/">
           <h1><img src={assets.logo} alt="Logo" className='w-24 sm:w-28' /></h1>
