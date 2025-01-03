@@ -3,13 +3,13 @@ import { assets } from "../assets/frontend_assets/assets"
 import { deleteProduct } from "../controllers/productController"
 
 
-const AdminProductCard = ({ props ,products}) => {
+const AdminProductCard = ({ props ,products,setProducts}) => {
     const handleProductDelete = async (e) => {
         e.preventDefault()
         if (!confirm("Are you sure to delete!")) return 0
         try {
             //const res = deleteProduct(props._id)
-            products = products.filter((p) => p._id == props._id)
+            setProducts(products.filter((p) => p._id == props._id))
         } catch (error) {
             alert(error.message)
         }
