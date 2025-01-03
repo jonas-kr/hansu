@@ -23,12 +23,12 @@ const Orders = () => {
             setTotalPages(res.totalPages)
         }
         getData()
-    }, [page])
+    }, [page,orders])
     return (
         <div>
             <h3>Orders page</h3>
             <div>
-                {orders && orders.map((o, i) => (<OrderCard props={o} key={i} />))}
+                {orders && orders.map((o, i) => (<OrderCard props={o} key={i} setOrders={setOrders} orders={orders} />))}
             </div>
             {totalPages > 1 && <Pagination totalPages={totalPages} currentPage={page} link="/admin/orders" />
             }

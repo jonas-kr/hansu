@@ -1,9 +1,20 @@
 import { assets } from "../assets/admin_assets/assets"
 import { useEffect, useState } from "react"
-import { updateOrder } from "../controllers/adminController"
+import { deleteOrder, updateOrder } from "../controllers/adminController"
 
-const OrderCard = ({ props }) => {
+const OrderCard = ({ props, orders, setOrders }) => {
     const [state, setState] = useState(props.state)
+
+    const handleOrderDelete = async (e) => {
+        e.preventDefault()
+        if (!confirm("Are you sure to delete!")) return 0
+        try {
+            const res = deleteOrder(props._id)
+            setOrders(orders.filter((o) => o._id == props._id))
+        } catch (error) {
+            alert(error.message)
+        }
+    }
 
     const handleStateUpdate = async () => {
         event.preventDefault()
@@ -36,6 +47,8 @@ const OrderCard = ({ props }) => {
             </div>
             <p className="text-base font-medium sm:text-lg">DA{props.totalPrice}</p>
             <div className="h-full flexBetween items-end sm:flex-col">
+                <img src={assets.bin_icon} alt="bin" className="w-5 cursor-pointer" onClick={handleOrderDelete} />
+
                 <select className={`p-2 rounded-sm font-semibold text-white
                     ${state == "Waiting" && "bg-orange-500"} ${state == "Confirmed" && "bg-green-500"} ${state == "Refused" && "bg-red-500"}
                     `} value={state} onChange={(e) => { setState(e.target.value) }}>

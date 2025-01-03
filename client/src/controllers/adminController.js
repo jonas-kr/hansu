@@ -1,6 +1,6 @@
 import { URL } from "../assets/frontend_assets/assets"
 
-const getOrders = async ({page,limit}) => {
+const getOrders = async ({ page, limit }) => {
     const res = await fetch(`${URL}/api/orders?page=${page}&limit=${limit}`, {
         method: 'GET',
         headers: {
@@ -15,7 +15,7 @@ const getOrders = async ({page,limit}) => {
     return data
 }
 
-const updateOrder= async (id,state) => {
+const updateOrder = async (id, state) => {
     if (!state) {
         throw Error('All fields are required')
     }
@@ -31,6 +31,22 @@ const updateOrder= async (id,state) => {
         body: info
     })
     const data = await res.json()
+    if (!res.ok) {
+        throw Error(data.error)
+    }
+    return data
+}
+
+const deleteOrder = async (id) => {
+    const res = await fetch(`${URL}/api/orders/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+    })
+    const data = await res.json()
+
     if (!res.ok) {
         throw Error(data.error)
     }
@@ -53,4 +69,4 @@ const getUserOrders = async () => {
 }
 
 
-export { getOrders,getUserOrders ,updateOrder}
+export { getOrders, getUserOrders, updateOrder, deleteOrder }

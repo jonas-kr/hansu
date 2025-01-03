@@ -10,11 +10,9 @@ const AdminProductCard = ({ props ,products,setProducts}) => {
         try {
             const res = deleteProduct(props._id)
             setProducts(products.filter((p) => p._id == props._id))
-
         } catch (error) {
             alert(error.message)
         }
-
     }
 
     return (
