@@ -30,7 +30,7 @@ const ProductList = () => {
             setTotalPages(res.totalPages)
         }
         getData()
-    }, [page])
+    }, [page,products])
 
     return (
         <>
