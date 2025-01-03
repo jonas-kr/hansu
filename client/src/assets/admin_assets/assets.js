@@ -10,7 +10,7 @@ export const assets = {
     parcel_icon
 }
 
-export const availableSizes = ["XS", "S", "M", "L", "XL", "XXL"];
-export const shoeSizes  = [36,37,38,39,40,41,42,43];
-export const categories = ["Men","Women","kids"]
-export const subCategories = ["Topwear","bottomwear","winterwear"]
+export const availableSizes = ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "Standard"];
+export const shoeSizes = [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46];
+export const categories = ["Men", "Women", "kids"]
+export const subCategories = ["Topwear", "bottomwear", "winterwear"]
