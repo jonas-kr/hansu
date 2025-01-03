@@ -36,7 +36,7 @@ const OrderCard = ({ props }) => {
             </div>
             <p className="text-base font-medium sm:text-lg">DA{props.totalPrice}</p>
             <div className="h-full flexBetween items-end sm:flex-col">
-                <select className={`p-2 rounded-sm font-semibold 
+                <select className={`p-2 rounded-sm font-semibold text-white
                     ${state == "Waiting" && "bg-orange-500"} ${state == "Confirmed" && "bg-green-500"} ${state == "Refused" && "bg-red-500"}
                     `} value={state} onChange={(e) => { setState(e.target.value) }}>
                     <option value="Waiting">Waiting</option>
